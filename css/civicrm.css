@@ -491,6 +491,10 @@ table.dataTable.display tbody tr.even {
 #crm-container table th {
 	border-bottom: 1px solid var(--light-gray);
 }
+#crm-container .ui-tabs-panel table th {
+	border-bottom: 0 solid transparent;
+	text-transform: inherit;
+}
 .crm-container table.crm-info-panel .label {
 	color: var(--vvv-dark-gray);
 	font-weight: normal;
@@ -768,7 +772,6 @@ table.dataTable.display tbody tr.even {
 	clear: both;
 	zoom: 1;
 	min-width: calc(100% - 30px);
-    overflow: scroll;
 }
 .crm-container .dataTables_processing {
 	position: absolute;
@@ -4144,7 +4147,11 @@ crm-container .ac_results {
 .crm-container .crmMailing .preview-group .select2-container {
 	margin: 10px 0;
 }
-
+/* API Explorer 4 */
+#crm-main-content-wrapper #bootstrap-theme form {
+	min-width: auto;
+	min-height: inherit;
+}
 /* Groups */
 
 #crm-container .crm-group-parent td.crm-group-name {
@@ -4576,9 +4583,9 @@ crm-container .ac_results {
 	border-radius: 3px;
 }
 .crm-container .select2-container-multi .select2-choices .select2-search-field input {
-    padding: 0;
-    min-height: 20px;
-    margin: 0;
+	padding: 0;
+	min-height: 20px;
+	margin: 0;
 }
 .crm-container .select2-search-choice-close {
 	top: 6px;
@@ -4586,7 +4593,7 @@ crm-container .ac_results {
 }
 .crm-container .select2-container .select2-choice abbr {
 	top: 9px;
-    left: 11px;
+	left: 11px;
 }
 .select2-drop-active {
 	border: 1px solid var(--mid-gray);
@@ -4939,6 +4946,9 @@ body.admin.com_civicrm .disabled {
 }
 body.com_civicrm .crm-container div.ui-notify-message.info div.icon {
 	margin-top: 8px;
+}
+body.com_civicrm .crm-container .collapse {
+	height: auto;
 }
 
 @media (max-width: 768px) {
