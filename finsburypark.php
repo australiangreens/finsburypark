@@ -6,10 +6,47 @@ use CRM_Finsburypark_ExtensionUtil as E;
 /**
  * Implements hook_civicrm_config().
  *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/ 
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
 function finsburypark_civicrm_config(&$config) {
   _finsburypark_civix_civicrm_config($config);
+}
+
+/**
+ * Implements hook_civicrm_alterBundle(). Add Bootstrap.
+ */
+
+function finsburypark_civicrm_alterBundle(CRM_Core_Resources_Bundle $bundle) {
+  $theme = Civi::service('themes')->getActiveThemeKey();
+  if ($theme !== 'finsburypark') {
+    return;
+  }
+
+  switch ($theme . ':' . $bundle->name) {
+    case 'finsburypark:bootstrap3':
+      $bundle->clear();
+      $bundle->addStyleFile('finsburypark', 'css/bootstrap3.css');
+      $bundle->addScriptFile('finsburypark', 'js/bootstrap.min.js', [
+        'translate' => FALSE,
+      ]);
+      $bundle->addScriptFile('finsburypark', 'js/noConflict.js', [
+        'translate' => FALSE,
+      ]);
+      break;
+  }
+  if ($bundle->name == 'coreStyles') {
+    $bundle->filter(function($snippet) {
+      if ($snippet['name'] == 'civicrm:css/civicrm.css') {
+        $snippet['weight'] = 290;
+        return $snippet;
+      }
+      elseif (($snippet['name'] == 'civicrm:css/custom.css') or (strpos($snippet['name'], 'custom.css') !== false)) {
+        $snippet['weight'] = 300;
+        return $snippet;
+      }
+      return TRUE;
+    });
+  }
 }
 
 /**
@@ -140,31 +177,3 @@ function finsburypark_civicrm_entityTypes(&$entityTypes) {
 function finsburypark_civicrm_themes(&$themes) {
   _finsburypark_civix_civicrm_themes($themes);
 }
-
-// --- Functions below this ship commented out. Uncomment as required. ---
-
-/**
- * Implements hook_civicrm_preProcess().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
- *
-function finsburypark_civicrm_preProcess($formName, &$form) {
-
-} // */
-
-/**
- * Implements hook_civicrm_navigationMenu().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
- *
-function finsburypark_civicrm_navigationMenu(&$menu) {
-  _finsburypark_civix_insert_navigation_menu($menu, 'Mailings', array(
-    'label' => E::ts('New subliminal message'),
-    'name' => 'mailing_subliminal_message',
-    'url' => 'civicrm/mailing/subliminal',
-    'permission' => 'access CiviMail',
-    'operator' => 'OR',
-    'separator' => 0,
-  ));
-  _finsburypark_civix_navigationMenu($menu);
-} // */
