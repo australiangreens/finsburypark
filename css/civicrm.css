@@ -34,31 +34,9 @@
 
 /*
 	FONTS & COLORS
-	
-*/
+*/	
 
-@font-face {
-	font-family: SourceSansPro;
-	src: url('../fonts/SourceSansPro-Regular.ttf.woff');
-	font-weight: normal;
-}
-@font-face {
-	font-family: SourceSansPro;
-	src: url('../fonts/SourceSansPro-It.ttf.woff');
-	font-weight: normal;
-	font-style: italic;
-}
-@font-face {
-	font-family: SourceSansPro;
-	src: url('../fonts/SourceSansPro-Bold.ttf.woff');
-	font-weight: bold;
-	font-weight: 600;
-}
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('../fonts/fontawesome-webfont.woff');
-	font-weight: normal;
-}
+
 :root {
 	--vvv-dark-gray: #3e3e3e;
 	--vv-dark-gray: #555;
@@ -199,7 +177,7 @@ label, input, button, select, textarea,
 .crm-container div.select2-container,
 .crm-container input.form-submit, 
 .crm-container a.button {
-	font-family: SourceSansPro, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans, Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 0.9rem;
 }
 code, pre, kbd {
@@ -3499,7 +3477,7 @@ div.crm-master-accordion-header a.helpicon {
 	visibility: hidden;
 }
 .crm-container div#alpha-filter {
-	background-color: var(--mid-gray);
+	background-color: var(--vv-light-gray);
 	margin: 15px 0 15px;
 	padding: 5px 10px 5px;
 	border-radius: 3px;
@@ -4545,7 +4523,7 @@ crm-container .ac_results {
 	font-weight: normal;
 	color: var(--vv-dark-gray);
 	border-radius: 2px;
-	font-family: SourceSansPro, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	text-align: center;
 }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight,
@@ -5113,4 +5091,11 @@ html.admin-bar  #crm-container .ui-state-default,
 html.admin-bar #crm-container .ui-widget-content .ui-state-default, 
 html.admin-bar #crm-container .ui-widget-header .ui-state-default {
 	background: transparent;
+}
+html.admin-bar .crm-container :not(.crm-footer) .messages.status .crm-i {
+	background-color: var(--green);
+}
+html.admin-bar #crm-container :not(.crm-footer) .messages.status,
+html.admin-bar .crm-container div.messages.status::before {
+    background-color: var(--light-green);
 }
