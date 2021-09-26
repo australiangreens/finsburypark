@@ -43,7 +43,7 @@ After installing the extension, select it via Nav menu > Administer > Customize 
 
 ## Changelog / known issues
 
-Version 0.14 - Backdrop test and tweaks. Removed fonts to improve speed.
+Version 0.14 - Backdrop test and tweak. Swapped fonts to system fonts to improve speed & reduce size.
 
 Version 0.13 - Drupal 9 & Joomla 4, addresses cascade order (loads theme CSS after other Civi css) – thanks @aydun. Tested against 5.42
 
