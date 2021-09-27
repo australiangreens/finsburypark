@@ -5093,6 +5093,7 @@ html.admin-bar #crm-container .ui-widget-header .ui-state-default {
 }
 html.admin-bar .crm-container :not(.crm-footer) .messages.status .crm-i {
 	background-color: var(--green);
+	height: 100%;
 }
 html.admin-bar #crm-container :not(.crm-footer) .messages.status,
 html.admin-bar .crm-container div.messages.status::before {
