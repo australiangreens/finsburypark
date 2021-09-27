@@ -6,7 +6,7 @@
 /* 		
 	Structure
 	========= 
-	- FONTS & COLORS
+	- COLORS
 	- RESETS
 	- TYPE: core, headings
 	- TABLES: core, sticky header, sorting header, reports/lists, row highlighting, data tables, grid div
@@ -33,7 +33,7 @@
 */
 
 /*
-	FONTS & COLORS
+	COLORS
 */	
 
 
@@ -162,8 +162,8 @@ div.crm-container form {
 .crm-container select, 
 .crm-container textarea,
 .crm-container button,
+.crm-container label,
 div.ui-dialog,
-.crm-container,
 #crm-container,
 .crm-container .ui-widget,
 #crm-container .ui-widget,
@@ -172,7 +172,6 @@ div.ui-dialog,
 .ui-widget textarea, 
 .ui-widget button,
 .ui-widget,
-label, input, button, select, textarea,
 .crm-container .select2-container .select2-choice > .select2-chosen,
 .crm-container div.select2-container,
 .crm-container input.form-submit, 
@@ -210,7 +209,7 @@ td pre {
 .crm-container .bold,
 .crm-container b,
 .crm-container strong {
-	font-weight: 600;
+	font-weight: bold;
 }
 .crm-container .font-italic,
 .crm-container em {
