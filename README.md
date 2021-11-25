@@ -15,7 +15,6 @@ The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 This extension has not yet been published for installation via the web UI.
 
-
 ## Installation (CLI, Zip)
 
 Sysadmins and developers may download the `.zip` file for this extension and
@@ -23,7 +22,8 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-cv dl finsburypark@https://github.com/vingle/finsburypark/archive/master.zip
+wget https://lab.civicrm.org/extensions/finsburypark/-/archive/master/finsburypark-master.zip
+unzip finsburypark-master.zip
 ```
 
 ## Installation (CLI, Git)
@@ -32,7 +32,7 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/vingle/finsburypark.git
+git clone https://lab.civicrm.org/extensions/finsburypark.git
 cv en finsburypark
 ```
 
@@ -42,6 +42,8 @@ After installing the extension, select it via Nav menu > Administer > Customize 
 
 
 ## Changelog / known issues
+
+Version 0.15 - Resolved a problematic Bootstrap issue. Improved display on Civi Bootstrap screens (API4, FormBuilder, SearchKit, etc)
 
 Version 0.14 - Backdrop test and tweak. Swapped fonts to system fonts to improve speed & reduce size.
 

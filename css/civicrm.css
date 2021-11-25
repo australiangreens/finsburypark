@@ -2660,6 +2660,7 @@ span.crm-status-icon {
 	line-height: 28px;
 	text-shadow: none;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	min-height: 31px;
 }
 #crm-container .crm-button input[type="submit"] {
 	border: 0 solid transparent;
@@ -2795,6 +2796,15 @@ i.fa-pencil {
 }
 #crm-recently-viewed li.crm-recently-viewed {
 	white-space: inherit;
+}
+#crm-container button.icon-button {
+	border-radius: 8px;
+}
+#crm-container button.icon-button i.crm-i {
+	margin: 0 -10px;
+    border: 0 solid transparent;
+    border-radius: 8px;
+	background: transparent;
 }
 
 /*
@@ -5010,9 +5020,6 @@ body.path-civicrm .crm-container fieldset:not(.fieldgroup) > legend {
 
 /* Joomla */
 
-#crm-main-content-wrapper .row {
-	margin-left: 0;
-}
 body.task-civicrmcontactview #sidebar-left {
 	display: none; /* Why is there a sidebar? */
 }
