@@ -2423,6 +2423,9 @@ span.crm-status-icon {
 	height: 30px;
 	background: transparent url("../images/loading-overlay.gif") no-repeat 0 0;
 }
+.crm-container div div.crm-msg-loading div.icon {
+	background: transparent url("../images/loading.gif") no-repeat 0 0;
+}
 #crm-container .fa-spin {
 	background-color: transparent !important;
 	border-right: 0 solid transparent !important;
@@ -2591,9 +2594,11 @@ span.crm-status-icon {
 	opacity: 1;
 }
 .crm-container .ui-dialog-buttonpane {
-	background: none;
-	border: 0 solid transparent;
-	padding-bottom: 10px;
+    background: var(--light-gray);
+    border: 0 solid transparent;
+    border-top: 1px solid var(--mid-gray);
+    padding-bottom: 5px;
+    margin-top: 0;
 }
 .crm-container .ui-dialog-buttonset .ui-button {
 	padding: 0;
@@ -2812,6 +2817,10 @@ i.fa-pencil {
 
 /* Core */
 
+#crmIconPicker {
+  background-color: var(--vv-light-gray);
+  padding: 1rem !important;
+}
 .crm-container .action-icon {
 	vertical-align: middle;
 	padding: 2px 2px 2px 3px;
@@ -4821,10 +4830,13 @@ span.crm-select-item-color {
 	padding: 0.5rem 1rem 0.25rem;
 }
 .crm-container.ui-dialog .ui-dialog-content {
-	border-radius: 0 0 3px 3px;
-	padding: 1rem !important;
-	width: calc(100% - 1rem) !important;
+	padding: 0 !important;
 	height: auto !important;
+}
+.crm-container.ui-dialog .status,
+.crm-container.ui-dialog .crm-block {
+	border-radius: 0;
+	margin-bottom: 0;
 }
 .crm-container.ui-dialog .status {
 	border-radius: 0;
