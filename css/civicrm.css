@@ -4838,9 +4838,6 @@ span.crm-select-item-color {
 	border-radius: 0;
 	margin-bottom: 0;
 }
-.crm-container.ui-dialog .status {
-	border-radius: 0;
-}
 .crm-container.ui-dialog.ui-resizable:before {
 	display: block;
 	content: " ";
