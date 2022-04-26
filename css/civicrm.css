@@ -4817,6 +4817,7 @@ span.crm-select-item-color {
 	border-radius: 4px;
 	max-height: calc(100vh - 200px) !important;
 	overflow: scroll;
+	background-color: var(--vvv-light-gray);
 }
 .crm-container .ui-dialog-titlebar.ui-widget-header {
 	background: none;
@@ -4837,6 +4838,7 @@ span.crm-select-item-color {
 .crm-container.ui-dialog .crm-block {
 	border-radius: 0;
 	margin-bottom: 0;
+	background-color: var(--vvv-light-gray);
 }
 .crm-container.ui-dialog.ui-resizable:before {
 	display: block;
