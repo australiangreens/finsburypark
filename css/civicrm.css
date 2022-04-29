@@ -1420,7 +1420,8 @@ input.crm-form-checkbox+label {
 	line-height: 2;
 	border: 0px solid var(--dark-gray);
 	background: var(--vv-light-gray);
-	background-repeat: none;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 .crm-container textarea, 
 .crm-container .crm-container input[type="text"], 
