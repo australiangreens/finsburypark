@@ -438,6 +438,10 @@ i.crm-i {
 .crm-container tr.odd-row td {
 	background-color: white;
 }
+.crm-container tr.crm-row-ok td,
+.crm-container tr.crm-row-error td {
+	background-color: transparent;
+} 
 .crm-container tr.even-row td, 
 .crm-container tr.odd-row td, 
 .crm-container table.display td, 
@@ -1936,17 +1940,17 @@ input.crm-form-checkbox+label {
 }
 .crm-container .crm-editable-enabled {
 	padding-left: 2px;
-	border: 2px dashed transparent;
+	border: 2px dotted transparent;
 }
 .crm-container .crm-editable-textarea-enabled {
 	white-space: normal;
 }
 .crm-container .crm-editable-enabled:hover {
-	border: 2px dashed var(--light-gray);
+	border: 2px dotted var(--light-gray);
 	cursor: pointer;
 }
 .crm-container .crm-editable-enabled.crm-editable-editing:hover {
-	border: 2px dashed transparent;
+	border: 2px dotted transparent;
 	cursor: auto;
 }
 .crm-container span.crm-editable-textarea-enabled {
@@ -2184,10 +2188,11 @@ input.crm-form-checkbox+label {
 /* Styles for Actions Ribbon */
 
 .crm-container .crm-actions-ribbon {
-    margin: 0 0 10px 178px;
+    margin: 0 0 15px 178px;
 }
-.crm-container .crm-actions-ribbon.crm-contribpage-tab-actions-ribbon {
-	margin: 0 0 10px 0;
+.crm-container .crm-actions-ribbon.crm-contribpage-tab-actions-ribbon,
+.crm-container .crm-actions-ribbon.crm-event-manage-tab-actions-ribbon {
+	margin: 0 0 15px 0;
 }
 #crm-container .crm-actions-ribbon ul {
 	margin: 0;
@@ -4868,10 +4873,18 @@ span.crm-select-item-color {
 }
 /* unset the styling for the li in jstree */
 
-#tagtree ul {
+#crm-container #tagtree {
+	height: 100%;
+	max-height: 100%;
+	overflow: initial;
+}
+#crm-container #tagtree ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+}
+#crm-container .ui-tabs #tagtree li a {
+	padding: 0;
 }
 #crm-container .crm-tag-item {
 	display: inline-block;
@@ -5033,6 +5046,9 @@ body.path-civicrm .crm-container fieldset:not(.fieldgroup) > legend {
 body.task-civicrmcontactview #sidebar-left {
 	display: none; /* Why is there a sidebar? */
 }
+body.admin.com_civicrm #content-right {
+	padding: 20px;
+}
 #mainTabContainer li.crm-tab-button {
 	border: 0 solid transparent !important;
 	margin: 0 !important;
@@ -5055,7 +5071,6 @@ body.com_civicrm .crm-container div.ui-notify-message.info div.icon {
 body.com_civicrm .crm-container .collapse {
 	height: auto;
 }
-
 @media (max-width: 768px) {
 	body.admin.com_civicrm #sidebar-left {
 		display: none;
@@ -5067,7 +5082,7 @@ body.com_civicrm .crm-container .collapse {
 	body.com_civicrm #crm-container {
 		margin: 0 -20px;
 	}
-}
+}  
 
 /* Wordpress */
 
