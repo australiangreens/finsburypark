@@ -40,8 +40,11 @@ cv en finsburypark
 
 After installing the extension, select it via Nav menu > Administer > Customize Data and Screens > Display Preferences, and save.
 
+In some instances, after upgrading CiviCRM, the theme defaults back to Civi's default theme and you will need to disable and re-enable the theme extension.
 
 ## Changelog / known issues
+
+Version 0.16 - Multiple small fixes
 
 Version 0.15 - Resolved a problematic Bootstrap issue. Improved display on Civi Bootstrap screens (API4, FormBuilder, SearchKit, etc)
 
