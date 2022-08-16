@@ -10,6 +10,8 @@ It has been tested to work on Backdrop, Drupal 7, 8 & 9, WordPress, and Joomla 3
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
+There is a public demo available (using Joomla 4) here: https://cividemo.com.
+
 
 ## Installation (Web UI)
 
