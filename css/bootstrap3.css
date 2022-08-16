@@ -139,7 +139,6 @@
 	font-family: inherit;
 	font-size: 0.9rem;
 	padding: 0 0 2px 5px;
-	width: calc(100% - 18px);
 }
 #crm-container #afGuiEditor .af-gui-edit-options-bar h4 {
 	margin: 2px 0 0 5px;
@@ -202,6 +201,7 @@
 	padding: 0;
 	border: 0 solid transparent;
 	box-shadow: none;
+	background: transparent;
 }
 #crm-container #afGuiEditor .af-gui-button > .btn.disabled {
 	background-color: var(--light-gray);
