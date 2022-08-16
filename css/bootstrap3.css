@@ -93,6 +93,9 @@
 #bootstrap-theme.api4-explorer-page .explorer-params-panel .panel-heading {
 	padding-top: 9px;
 }
+#bootstrap-theme.api4-explorer-page .panel-heading {
+	height: 53px;
+}
 /* Afform */
 
 #crm-container #afGuiEditor .nav-tabs > li {
