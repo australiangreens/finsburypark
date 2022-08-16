@@ -13,9 +13,9 @@
     <url desc="Support">https://visuali.st</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2021-25-11</releaseDate>
-  <version>0.15</version>
-  <develStage>beta</develStage>
+  <releaseDate>2022-16-08</releaseDate>
+  <version>0.16</version>
+  <develStage>stable</develStage>
   <compatibility>
     <ver>5.0</ver>
   </compatibility>
