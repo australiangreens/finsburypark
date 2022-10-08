@@ -83,16 +83,17 @@
 	color: inherit;
 	font-weight: inherit;
 }
-.crm-container ul li {
-	background-image: none;
-}
 #crm-container.clear,
 .crm-container .crm-group-summary .clear {
 	overflow: hidden;
 	width: 100%;
 }
+#crm-container ul {
+	margin: 0;
+}
 #crm-container ul li {
 	list-style-image: none;
+	background-image: none;
 }
 #crm-container .dashboard-elements,
 #crm-container #membership-listings,
@@ -108,6 +109,9 @@ div.crm-container form {
 }
 #crm-container table th {
 	background-color: transparent;
+}
+#crm-container td {
+	height: auto;
 }
 #crm-container,
 .crm-container {
@@ -2054,9 +2058,9 @@ input.crm-form-checkbox+label {
 /* Core */
 
 .crm-container .messages {
-	margin: 1em 0 1em;
 	border: none;
 	font-weight: normal;
+	color: inherit;
 }
 .crm-container .messages .msg-title {
 	font-weight: bold;
@@ -2664,7 +2668,7 @@ span.crm-status-icon {
 	background: none;
 	background-color: var(--vvv-light-gray);
 	color: var(--vvv-dark-gray);
-	border: 1px solid var(--dark-gray);
+	border: 1px solid var(--dark-gray) !important;
 	border-radius: 3px;
 	line-height: 28px;
 	text-shadow: none;
@@ -4980,7 +4984,6 @@ span.crm-select-item-color {
 
 body.admin-menu.page-civicrm #branding,
 body.path-civicrm header.content-header {
-	padding: 10px 20px 5px 20px;
 	position: relative;
 	background-color: var(--vv-light-gray);
 	margin-bottom: 5px;
@@ -4994,7 +4997,7 @@ body.page-civicrm table th {
 	}
 }
 
-/* Drupal 8 */
+/* Drupal 8+ */
 
 body.path-civicrm tbody tr:hover, 
 body.path-civicrm tbody tr:focus {
@@ -5038,6 +5041,9 @@ body.path-civicrm .crm-container fieldset:not(.fieldgroup) > legend {
 	top: -10px;
 	font-size: 0.9rem;
 	letter-spacing: inherit;
+}
+#crm-container .action-link {
+	padding: 0; /* Claro reset */
 }
 
 
