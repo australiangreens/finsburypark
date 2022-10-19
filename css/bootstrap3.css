@@ -69,7 +69,7 @@
 
 /* Buttons */
 
-#crm-container #bootstrap-theme.crm-search .btn-xs {
+#bootstrap-theme.crm-search .btn-xs {
 	padding: 0;
 }
 #bootstrap-theme.crm-search td .btn,
@@ -84,18 +84,28 @@
 	box-shadow: none;
 	border-radius: 2px;
 	margin: 0;
+	line-height: 28px;
+}
+#bootstrap-theme.crm-search input {
+	min-height: 24px;
 }
 #bootstrap-theme.crm-search .btn-group-xs > .btn {
-	font-size: 14px;
 	line-height: 28px;
 	border-radius: 3px;
 	padding: 0;
+}
+#bootstrap-theme.crm-search td.text-right .btn-group-xs > .btn-primary,
+#bootstrap-theme.crm-search td .btn-group > .btn-xs.dropdown-toggle  {
+	padding: 0 10px;
 }
 #bootstrap-theme.crm-search .btn-group-xs > .btn.dropdown-toggle {
 	padding: 0 10px 0 0;
 }
 #bootstrap-theme.crm-search .api4-clause-badge .btn {
 	padding: 0 10px !important;
+}
+#bootstrap-theme.crm-search td.text-right .btn-group-xs > .btn-secondary {
+	padding: 0;
 }
 #bootstrap-theme .crm-hover-button.ng-scope {
 	padding: 0 10px;
@@ -198,7 +208,6 @@
 #bootstrap-theme.crm-search th.text-right.form-inline .select2-chosen {
 	text-align: left;
 	padding: 0;
-	font-size: 1rem;
 }
 /* API explorer */
 #crm-container #bootstrap-theme.api4-explorer-page .explorer-params-panel .panel-heading button {
