@@ -140,6 +140,7 @@
 }
 #afGuiEditor .form-inline.af-gui-canvas-control-buttons button i {
 	margin-right: 0;
+	border-right: 0 solid transparent;
 }
 #crm-container #bootstrap-theme .af-gui-add-element-button i.crm-i {
 	margin: 0;
@@ -324,7 +325,8 @@
 	border: 0 solid transparent !important;
 }
 #bootstrap-theme .af-gui-search-display {
-	margin: 29px -3px -4px;
+	/*margin: 29px -3px -4px;*/
+	margin: 0;
 }
 #crm-container #afGuiEditor button .crm-editable-enabled:focus,
 #crm-container #afGuiEditor button .crm-editable-enabled:hover {
@@ -339,17 +341,21 @@
 #crm-container #afGuiEditor .af-gui-field-input-type-chainselect .input-group .dropdown-toggle i, 
 #crm-container #afGuiEditor .af-gui-field-input-type-select .input-group .dropdown-toggle i {
 	background: transparent;
-	border-color: transparent;
+	border-color: transparent !important;
 	box-shadow: none;
+	margin: 0;
 }
 #crm-container #afGuiEditor .af-gui-element, 
 #afGuiEditor .af-gui-markup {
 	margin: 3px 0;
-	border: 3px solid var(--v-light-gray);
+	border: 3px solid var(--light-gray);
 	padding: 33px 5px 4px;
-  }
+}
+#crm-container a.cke_button {
+	height: auto;
+}
 #crm-container #afGuiEditor .af-gui-markup {
-	border: 3px solid var(--v-light-gray);
+	border: 3px solid var(--light-gray);
 	margin-bottom: 3px;
 }
 #crm-container #afGuiEditor  [crm-ui-editable] {
@@ -416,10 +422,21 @@
 	height: auto !important;
 	margin: 0;
 }
+#crm-container #afGuiEditor #afGuiEditor-palette-tabs li > a.dropdown-toggle:hover,
+#crm-container #afGuiEditor #afGuiEditor-palette-tabs li > a.dropdown-toggle:focus {
+	border: 0 solid transparent;
+	background: transparent;
+}
 .crm-container [crm-ui-editable]:hover,
 .crm-container [crm-ui-editable]:focus {
 	background-color: transparent !important;
 }
-#crm-container #bootstrap-theme .pull-right .btn-group {
+#crm-container #bootstrap-theme .panel-heading .pull-right .btn-group {
 	padding-top: 8px;
+}
+#afGuiEditor .af-gui-field-input-type-select .input-group .dropdown-toggle {
+	margin-left: -30px !important;
+}
+#afGuiEditor .af-gui-field-input-type-select .input-group .form-control:first-child {
+	border-radius: 3px;
 }
