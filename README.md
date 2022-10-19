@@ -46,6 +46,8 @@ In some instances, after upgrading CiviCRM, the theme defaults back to Civi's de
 
 ## Changelog / known issues
 
+Version 0.17 - Improved Form Builder and Search Kit support, some D9+ Claro theme resets
+
 Version 0.16 - Multiple small fixes
 
 Version 0.15 - Resolved a problematic Bootstrap issue. Improved display on Civi Bootstrap screens (API4, FormBuilder, SearchKit, etc)
