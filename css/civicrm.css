@@ -2676,8 +2676,8 @@ span.crm-status-icon {
 	min-height: 28px;
 }
 #crm-container .crm-button input[type="submit"] {
-	border: 0 solid transparent;
-	background: transparent;
+	border: 0 solid transparent !important;
+	background: transparent !important;
 	padding: 0 10px;
 }
 #crm-container #_qf_Search_refresh,
@@ -4843,7 +4843,6 @@ span.crm-select-item-color {
 }
 .crm-container.ui-dialog .ui-dialog-content {
 	padding: 0 !important;
-	height: auto !important;
 }
 .crm-container.ui-dialog .status,
 .crm-container.ui-dialog .crm-block {
