@@ -46,6 +46,8 @@ In some instances, after upgrading CiviCRM, the theme defaults back to Civi's de
 
 ## Changelog / known issues
 
+Version 0.18 - Multiple small fixes, including increased D9 Claro and J4 support (ref https://lab.civicrm.org/extensions/finsburypark/-/issues/13)
+
 Version 0.17 - Improved Form Builder and Search Kit support, some D9+ Claro theme resets
 
 Version 0.16 - Multiple small fixes
