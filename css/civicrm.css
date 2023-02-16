@@ -1414,7 +1414,6 @@ input.crm-form-checkbox+label {
 }
 #crm-container td > .crm-form-checkbox,
 .crm-container td > .crm-form-checkbox {
-	float: left;
 	margin: 2px 5px 0 0;
 }
 #crm-container td.label > .crm-form-checkbox,
