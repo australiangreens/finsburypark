@@ -4723,6 +4723,7 @@ crm-container .ac_results {
 }
 .select2-drop-active {
 	border: 1px solid var(--mid-gray);
+	z-index: 100002;
 }
 /* Add search icon to ajax single-selects */
 
