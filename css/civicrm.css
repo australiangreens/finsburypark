@@ -1397,7 +1397,6 @@ input.crm-form-entityref {
 }
 div.crm-container label {
 	font-weight: normal;
-	display: inline;
 }
 .crm-container .crm-section .label,
 .crm-container .form-layout td.label,
@@ -2854,10 +2853,6 @@ i.fa-pencil {
 
 /* Core */
 
-#crmIconPicker {
-  background-color: var(--vv-light-gray);
-  padding: 1rem !important;
-}
 .crm-container .action-icon {
 	vertical-align: middle;
 	padding: 2px 2px 2px 3px;
@@ -3136,12 +3131,32 @@ div.crm-master-accordion-header a.helpicon {
 #crm-container .credit_card_type-section .crm-credit_card_type-icons a:active {
 	color: white;
 }
+
 /* Icon picker */
 
+#crmIconPicker {
+    background-color: var(--vv-light-gray);
+    padding: 1rem !important;
+}
+#crmIconPicker a.ui-button {
+    background: transparent;
+    width: 42px;
+    height: 40px;
+    border: 0 solid transparent;
+    padding: 16px 5px;
+}
+#crmIconPicker a.ui-button .ui-icon {
+    font-size: 1.5rem;
+}
+#crmIconPicker a.ui-button:hover,
+#crmIconPicker a.ui-button:focus {
+    background: var(--v-light-gray);
+}
 .crm-container a.crm-icon-picker-button {
-	min-width: 10em;
+	min-width: inherit;
 	text-align: inherit;
 	color: var(--vvv-dark-gray);
+    height: inherit;
 }
 .crm-container a.crm-icon-picker-button .ui-button-icon {
 	margin: 5px 0 5px 5px;
@@ -4988,6 +5003,22 @@ span.crm-select-item-color {
 	}
 }
 
+/* Front end */
+
+
+#crm-container.crm-public {
+    font-family: 'Source Sans Pro';
+    font-size: 16.5px;
+    line-height: 1.7;
+}
+
+/* Form Builder */
+
+#crm-container.crm-public .af-field-type-file {
+  padding: 1rem 0;
+  display: block;
+}
+
 /*
 	
 	CMS SPECIFIC
@@ -5123,6 +5154,10 @@ body.com_civicrm #crm-container .crm-contact-page #mainTabContainer > .ui-tabs-p
 body.com_civicrm .dropdown-toggle::after {
 	display: none;
 }
+body.com_civicrm a[target="_blank"]::before {
+    display: none;
+} /* Joomla 4 fix */ 
+
 @media (max-width: 768px) {
 	body.admin.com_civicrm #sidebar-left {
 		display: none;
