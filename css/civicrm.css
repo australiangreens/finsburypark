@@ -5003,15 +5003,6 @@ span.crm-select-item-color {
 	}
 }
 
-/* Front end */
-
-
-#crm-container.crm-public {
-    font-family: 'Source Sans Pro';
-    font-size: 16.5px;
-    line-height: 1.7;
-}
-
 /* Form Builder */
 
 #crm-container.crm-public .af-field-type-file {
@@ -5153,6 +5144,9 @@ body.com_civicrm #crm-container .crm-contact-page #mainTabContainer > .ui-tabs-p
 }
 body.com_civicrm .dropdown-toggle::after {
 	display: none;
+}
+body.com_civicrm #bootstrap-theme .form-group {
+  margin-bottom: 5px !important;
 }
 body.com_civicrm a[target="_blank"]::before {
     display: none;
