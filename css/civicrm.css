@@ -275,7 +275,7 @@ i.crm-i {
 }
 #crm-container .element-right {
 	float: right;
-	margin: 4px 20px 0 0;
+	margin: 6px 20px 0 0;
 }
 .crm-container .right {
 	text-align: right;
@@ -372,7 +372,7 @@ i.crm-i {
 /* Core */
 
 .crm-container table {
-	margin: 0 0 1em;
+	margin: 0 0 1rem;
 	border-collapse: collapse;
 	width: 100%;
 	border: 0;
@@ -1339,7 +1339,6 @@ input.crm-form-entityref {
 	border: none;
 	position: relative;
 	height: 35px;
-	padding-top: 5px;
 	margin-bottom: 4px;
    	background-color: var(--vv-light-gray);
 }
@@ -1348,8 +1347,7 @@ input.crm-form-entityref {
 }
 .crm-container .crm-pager-nav {
 	display: block;
-	margin-top: 7px;
-	padding-left: 5px;
+	padding: 3px 0 0 0;
 }
 /*
 	
@@ -1361,8 +1359,9 @@ input.crm-form-entityref {
 
 /* Inline form field 'post-help' and radio-button unselect */
 
+#crm-container .description,
 .crm-container .description {
-	font-size: 0.92rem;
+	font-size: 0.9rem;
 	font-weight: normal;
 	white-space: normal;
 	width: auto;
@@ -2739,8 +2738,7 @@ span.crm-status-icon {
 .crm-container input[type="submit"] i.crm-i,
 #crm-container input.form-submit-inline i.crm-i, 
 #crm-container .crm-button i.crm-i,
-.crm-container .ui-dialog-buttonset .ui-button .ui-icon,
-.crm-container .icon.delete-icon {
+.crm-container .ui-dialog-buttonset .ui-button .ui-icon {
 	background-color: var(--v-light-gray);
 	border-radius: 3px 0 0 3px;
 	border-right: 1px solid var(--dark-gray);
@@ -2907,12 +2905,6 @@ i.fa-pencil {
 
 /* Font Awesome */
 
-input.crm-placeholder-icon::placeholder,
-.crm-container .icon.delete-icon {
-	font-family: FontAwesome !important;
-	font-size: 16px;
-	background-image: none;
-}
 .crm-container .crm-delete-inline .icon.delete-icon {
 	margin: 0;
 	background: no-repeat;
@@ -2926,7 +2918,9 @@ input.crm-placeholder-icon::placeholder,
 .crm-container .inform-icon:before,
 .crm-container .icon.info-icon,
 #crm-container .messages.status.no-popup:before,
-.crm-container.ui-dialog .messages.status.no-popup:before {
+.crm-container.ui-dialog .messages.status.no-popup:before,
+input.crm-placeholder-icon::placeholder,
+.crm-container .icon.delete-icon {
 	font: normal normal normal 14px/1 FontAwesome;
 	font-style: normal;
 	font-size: 16px;
@@ -2956,7 +2950,8 @@ a.crm-i:hover {
 .crm-container a:hover .icon.delete-icon,
 .crm-container .crm-button:hover .icon.ui-icon-trash,
 .crm-container .crm-hover-button:hover .icon.ui-icon-trash,
-.crm-container span:hover>.icon.delete-icon {
+.crm-container span:hover>.icon.delete-icon,
+.crm-container .icon.delete-icon {
 	color:var(--red);
 }
 .crm-i.crm-i-blue,
@@ -2979,6 +2974,9 @@ a.crm-i:hover {
 
 /* Individual FA icons */
 
+.crm-container .icon.delete-icon::before {
+    content: "\f1f8";
+}
 #crm-container div span.privacy-flag {
 	float: right;
 	font-size: 80%;
@@ -3558,11 +3556,6 @@ div.crm-master-accordion-header a.helpicon {
 	color: var(--vvv-dark-gray);
 	border-color: var(--blue);
 }
-#crm-container #mainTabContainer {
-	border: 0 solid transparent;
-	background: transparent;
-	padding: 0;
-}
 .crm-container .crm-tab-button a, 
 .crm-container .ui-tabs li a {
 	padding: 8px 10px;
@@ -3603,6 +3596,11 @@ div.crm-master-accordion-header a.helpicon {
 	border-bottom-color: var(--light-gray);
 	text-decoration: none;
 }
+#crm-container #mainTabContainer {
+	border: 0 solid transparent;
+	background: transparent;
+	padding: 0;
+}
 #crm-container #mainTabContainer > .ui-tabs-panel {
 	padding: 10px 15px;
 	border: 1px solid var(--light-gray);
@@ -3612,6 +3610,13 @@ div.crm-master-accordion-header a.helpicon {
 	margin-top: -2px;
 	margin-bottom: 20px;
 	width: calc(100% - 30px);
+}
+#crm-container #mainTabContainer li.crm-tab-button {
+	border: 0 solid transparent !important;
+	margin: 0 !important;
+}
+#crm-container #mainTabContainer li.crm-tab-button.ui-tabs-selected {
+	border: 0 solid transparent !important;
 }
 #crm-container .contact-summary-contribute-tab {
 	padding-top: 5px;
@@ -4077,7 +4082,6 @@ div.crm-master-accordion-header a.helpicon {
 .crm-pager .ui-widget.ui-widget-content input {
 	margin: 0;
 	border: 0 solid transparent;
-	width: 25px;
 	background: var(--mid-gray);
 }
 .form-item.float-right .ui-widget.ui-widget-content input {
@@ -4875,7 +4879,7 @@ span.crm-select-item-color {
 	padding: 0.5rem 1rem 0.25rem;
 }
 .crm-container.ui-dialog .ui-dialog-content {
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem !important;
 	height: auto !important;
 }
 .crm-container.ui-dialog .status,
@@ -5105,24 +5109,11 @@ body.task-civicrmcontactview #sidebar-left {
 body.admin.com_civicrm #content-right {
 	padding: 20px;
 }
-#mainTabContainer li.crm-tab-button {
-	border: 0 solid transparent !important;
-	margin: 0 !important;
-}
-#crm-container div.description, #crm-container span.description, #crm-container dd.description {
-	font-size: 0.9rem;
-}
-#crm-container td span.descriptino {
-	margin: 0;
-}
 body.admin.com_civicrm .disabled {
 	opacity: 1;
 }
 body.admin.com_civicrm #sidebar-left {
 	display: none;
-}
-#mainTabContainer li.crm-tab-button.ui-tabs-selected {
-	border: 0 solid transparent !important;
 }
 body.com_civicrm .crm-container .collapse {
 	height: auto;
