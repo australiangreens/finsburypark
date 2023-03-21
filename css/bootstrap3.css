@@ -271,6 +271,10 @@
 #bootstrap-theme .form-control.select2-container.ng-not-empty {
     width: 150px;
 } 
+#bootstrap-theme .crm-search-admin-edit-columns-wrapper .dropdown-menu-right {
+    right: auto;
+    left: auto;
+}
 /* API explorer */
 #crm-container #bootstrap-theme.api4-explorer-page .explorer-params-panel .panel-heading button {
 	top: 0;
@@ -514,4 +518,11 @@
 
 #bootstrap-theme .af-markup {
     padding-bottom: 1rem;
+}
+
+/* Mosaico */
+
+#bootstrap-theme .crm-mosaico-modal-panel {
+  border: 0 solid transparent !important;
+  margin: 0 !important;
 }

@@ -372,7 +372,7 @@ i.crm-i {
 /* Core */
 
 .crm-container table {
-	margin: 0 0 1rem;
+	margin: 0 0 1em;
 	border-collapse: collapse;
 	width: 100%;
 	border: 0;
@@ -1409,7 +1409,7 @@ div.crm-container fieldset label {
 }
 input.crm-form-radio+label,
 input.crm-form-checkbox+label {
-	margin-left: 7px;
+	margin-left: 3px;
 }
 #crm-container td > .crm-form-checkbox,
 .crm-container td > .crm-form-checkbox {
@@ -3688,19 +3688,15 @@ div.crm-master-accordion-header a.helpicon {
 }
 #civicrm-news-feed .crm-tab-button a em {
 	display: inline-block;
-	padding: 3px 4px 2px 3px;
-	width: 14px;
-	height: 16px;
+	padding: 1px 0 0 0;
+    min-width: 18px;
+    height: 18px;
 	font-size: 0.8rem;	
 	font-weight: 600;
 	line-height: 0.9rem;
 	color: white;
-	vertical-align: baseline;
-	white-space: nowrap;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
 	background-color: var(--blue);
 	border-radius: 18px;
-	text-align: center;
 }
 
 /*
@@ -4160,7 +4156,7 @@ div.crm-master-accordion-header a.helpicon {
 	color: var(--vv-dark-gray);
 	font-weight: normal;
 	font-size: 0.9rem;
-	padding-top: 9px;
+/*	padding-top: 9px; */
 	vertical-align: top;
 }
 .crm-container .CRM_Contact_Form_Search_Basic .crm-form-block {
@@ -4717,7 +4713,7 @@ crm-container .ac_results {
 	border-radius: 3px;
 }
 .crm-container .select2-container .select2-choice > .select2-chosen {
-	padding: 1px 6px 1px 20px;
+	padding: 0 6px 1px;
 	margin: 0 6px 6px 6px;
 	box-shadow: none;
 	background-image: none;
@@ -4881,6 +4877,7 @@ span.crm-select-item-color {
 .crm-container.ui-dialog .ui-dialog-content {
 	padding: 0.5rem 1rem !important;
 	height: auto !important;
+	background: #fff;
 }
 .crm-container.ui-dialog .status,
 .crm-container.ui-dialog .crm-block {
@@ -5136,7 +5133,11 @@ body.com_civicrm #bootstrap-theme .form-group {
 }
 body.com_civicrm a[target="_blank"]::before {
     display: none;
-} /* Joomla 4 fix */ 
+} 
+body.admin.com_civicrm.layout-default #crm-qsearch label {
+  color: var(--vvv-dark-gray);
+}
+/* Joomla 4 fix */ 
 
 @media (max-width: 768px) {
 	body.admin.com_civicrm #sidebar-left {
