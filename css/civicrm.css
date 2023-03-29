@@ -3139,8 +3139,8 @@ div.crm-master-accordion-header a.helpicon {
 }
 #crmIconPicker a.ui-button {
     background: transparent;
-    width: 42px;
-    height: 40px;
+    width: 42px !important;
+    height: 40px !important; /* to override inline size */
     border: 0 solid transparent;
     padding: 16px 5px;
 }
