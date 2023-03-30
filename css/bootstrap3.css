@@ -207,7 +207,9 @@
 	margin-top: 30px;
 }
 #bootstrap-theme.crm-search .form-inline {
-	padding: 15px 0;
+	padding: 0;
+	position: relative;
+	bottom: 0;
 }
 #bootstrap-theme.crm-search fieldset .form-inline {
 	padding: 5px 0;
