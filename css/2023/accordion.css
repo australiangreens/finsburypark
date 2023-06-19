@@ -1,0 +1,231 @@
+/*
+	
+	EXPAND TRIANGLES
+	
+*/
+
+.crm-container .collapsed .crm-accordion-header::before, 
+.crm-container .crm-collapsible.collapsed .collapsible-title::before, 
+.crm-container span.collapsed::before,
+.crm-container a.collapsed::before, 
+.crm-container .crm-expand-row::before {
+	content: "\f0da";
+}
+.crm-container .crm-accordion-header::before, 
+.crm-container .crm-collapsible .collapsible-title::before, 
+.crm-container span.expanded::before, 
+.crm-container a.expanded::before, 
+.crm-container .crm-expand-row.expanded::before {
+	font-family: "FontAwesome";
+	content: "\f0d7";
+}
+.crm-container a.crm-expand-row:before,
+.crm-container a.crm-expand-row:link::before,
+.crm-container a.crm-expand-row:visited::before {
+	color: var(--vvv-dark-gray);
+}
+.crm-container span.collapsed::before, 
+.crm-container a.collapsed::before, 
+.crm-container .crm-expand-row::before,
+#crm-container .widget-content .crm-accordion-wrapper.collapsed .crm-accordion-header:before,
+#crm-container .widget-content .crm-accordion-header:before,
+.crm-container .crm-accordion-inner.collapsed .crm-accordion-header:before,
+.crm-container .crm-accordion-wrapper.collapsed .crm-master-accordion-header:before,
+.crm-container .crm-collapsible.collapsed .collapsible-title:before,
+.crm-container .crm-accordion-inner .crm-accordion-header:before, 
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header:before, 
+.crm-container .crm-collapsible .collapsible-title:before,
+.crm-container .crm-accordion-header:before,
+.crm-container .collapsed .crm-accordion-header:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-style: normal;
+	font-size: 1rem;
+	line-height: 1;
+	font-family: FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	color: var(--vvv-dark-gray);
+	text-indent: inherit;
+	margin: 2px 0 0 2px;
+	width: 1em;
+	display: inline-block;
+}
+
+/* Header */
+
+.crm-container .crm-accordion-header,
+.crm-container .crm-collapsible .collapsible-title,
+.crm-container span.collapsed,
+.crm-container a.collapsed,
+.crm-container .crm-expand-row {
+	cursor: pointer;
+}
+#crm-container .widget-content .crm-accordion-header {
+	background-color: var(--v-light-gray);
+	color: var(--vvv-dark-gray);
+}
+.crm-container .crm-accordion-header {
+	color: var(--vv-light-gray);
+	font-weight: normal;
+	padding: 4px 8px;
+	border-radius: 3px 3px 0 0;
+}
+#crm-container .widget-content .crm-accordion-wrapper.collapsed .crm-accordion-header,
+#crm-container .widget-content .crm-accordion-header,
+.crm-container .crm-accordion-inner .crm-accordion-header, 
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header, 
+.crm-container .crm-collapsible .collapsible-title,
+.crm-container .collapsed .crm-accordion-header,
+.crm-container .crm-accordion-header{
+	background-image: none;
+	text-indent: 0;
+}
+.crm-container .collapsed .crm-accordion-body,
+.crm-container .crm-collapsible.collapsed .collapsible-title+* {
+	display: none;
+}
+.crm-container .crm-expand-row {
+	min-width: 16px;
+	min-height: 16px;
+	display: inline-block;
+}
+.crm-container .crm-accordion-inner .crm-accordion-header,
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header,
+.crm-container .crm-collapsible .collapsible-title {
+	background-color: transparent;
+	color: var(--vvv-dark-gray);
+}
+.crm-container span.expanded::before, 
+#crm-container a.expanded::before, 
+.crm-container .crm-expand-row.expanded::before,
+#crm-container .widget-content .crm-accordion-header:before,
+.crm-container .crm-accordion-inner .crm-accordion-header:before, 
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header:before, 
+.crm-container .crm-collapsible .collapsible-title:before,
+.crm-container .crm-accordion-header:before {
+	content: "\f0d7";
+}
+.crm-container span.collapsed::before,
+.crm-container a.collapsed::before, 
+.crm-container .crm-expand-row::before,
+#crm-container .widget-content .crm-accordion-wrapper.collapsed .crm-accordion-header:before,
+.crm-container .crm-accordion-inner.collapsed .crm-accordion-header:before, 
+.crm-container .crm-accordion-wrapper.collapsed .crm-master-accordion-header:before, 
+.crm-container .crm-collapsible.collapsed .collapsible-title:before,
+.crm-container .collapsed .crm-accordion-header:before {
+	content: "\f0da";		
+}
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header {
+	font-size: 1rem;
+}
+.crm-container .crm-accordion-inner .crm-accordion-header {
+	font-size: 0.8rem;
+}
+#crm-container .widget-wrapper,
+.crm-container .crm-accordion-wrapper {
+	border-radius: 3px;
+	border: 1px solid var(--vv-light-gray);
+	background-color: var(--vvv-light-gray);
+	box-shadow: none !important;
+	margin-bottom: 0.5rem;
+}
+.crm-search_filters-accordion {
+	background-color: white;
+}
+.crm-container .crm-form-block .crm-accordion-wrapper {
+	border: 0 solid transparent;
+}
+#crm-container .widget-controls,
+#crm-container .widget-content .crm-accordion-header,
+.crm-container .crm-dashlet-header {
+	padding: 8px !important;
+	background-color: var(--vv-light-gray) !important;
+	background-image: unset !important; 
+}
+#crm-container .widget-controls .crm-i {
+	color: var(--v-dark-gray) !important;
+}
+#crm-container .widget-content,
+#crm-container .widget-content .crm-accordion-body {
+	border-top: 1px solid var(--light-gray);
+	padding: 14px 0 0 0;
+	background-color: transparent !important;
+}
+#crm-container .widget-content .crm-accordion-body {
+	padding: 10px;
+}
+.crm-container .collapsed .crm-accordion-header {
+	border-radius: 3px;
+}
+.crm-container .crm-accordion-body {
+	border-radius: 0 0 4px 4px;
+	border: 0 solid transparent;
+	border-top: 1px solid var(--light-gray);
+	padding: 1rem;
+}
+.crm-container .crm-accordion-body > div {
+	padding: 10px;
+}
+.crm-container .crm-accordion-body > div:first-of-type {
+	padding: 0 10px;
+}
+.crm-container .ui-tabs-panel .crm-accordion-body > div {
+	padding: 0;
+}
+.crm-container .ui-tabs-panel .crm-accordion-body .description {
+	margin: -5px 0 5px 8px;
+}
+.crm-container .crm-master-accordion-header+.crm-accordion-body {
+	border: none;
+	padding: 0;
+}
+.crm-container .crm-accordion-header.active {
+	font-weight: bold;
+	background-color: var(--vvv-dark-gray);
+}
+.crm-container .crm-master-accordion-header.crm-accordion-header:hover,
+.crm-container .crm-collapsible .collapsible-title:hover {
+	background-color: transparent;
+	color: black;
+}
+.crm-container .crm-accordion-wrapper .crm-accordion-header {
+	background-color: var(--light-gray);
+}
+.crm-container .crm-accordion-wrapper.collapsed .crm-accordion-header {
+	background-color: var(--vv-light-gray);
+}
+.crm-container .crm-accordion-wrapper .crm-accordion-header.active,
+.crm-container .crm-accordion-wrapper .crm-accordion-wrapper.collapsed:hover,
+.crm-container .crm-accordion-wrapper .crm-accordion-wrapper.collapsed:focus,
+.crm-container .crm-accordion-wrapper .crm-accordion-header:hover,
+.crm-container .crm-accordion-wrapper .crm-accordion-header.active:hover,
+.crm-container .crm-accordion-wrapper .crm-accordion-body .crm-accordion-header {
+	background-color: var(--light-gray);
+}
+.crm-container .crm-child-row>td {
+	padding-left: 1.8em;
+}
+.crm-container .crm-accordion-body .crm-search_criteria_basic-accordion,
+.crm-container .crm-advanced_search_form-accordion .crm-accordion-wrapper {
+	padding: 0 !important;
+	background: var(--vv-light-gray);
+	border: 1px solid var(--light-gray);
+}
+
+.crm-container .crm-search-form-block,
+.crm-container .crm-report-instanceList-form-block {
+	padding: 0;
+	border: 0 solid transparent;
+}
+.crm-container .crm-advanced_search_form-accordion .crm-accordion-header,
+.crm-container .CRM_Contact_Form_Search_Builder .crm-accordion-header,
+.crm-container .CRM_Contact_Form_Search_Basic .crm-accordion-header {
+	padding: 10px 20px 10px 10px;
+ 	margin-left: 10px;
+}
+.crm-container .crm-advanced_search_form-accordion .crm-accordion-body .crm-accordion-header {
+	padding: 6px 10px;
+	margin-left: 0;
+	background-position-y: 6px;
+	background-position-x: 7px;
+}

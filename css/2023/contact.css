@@ -1,0 +1,5 @@
+
+
+#crm-container #contact-summary div.crm-summary-row:has( > div.crm-content:empty) {
+    display: none;
+}

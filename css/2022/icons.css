@@ -1,0 +1,322 @@
+/*
+	
+	ICONS
+	
+*/
+
+/* Core */
+
+.crm-container .action-icon {
+	vertical-align: middle;
+	padding: 2px 2px 2px 3px;
+	margin: 2px 2px 3px 2px;
+	cursor: pointer;
+}
+#crm-container .order-icon {
+	height: 15px;
+	width: 10px;
+	padding-top: 4px;
+	padding-right: 4px;
+}
+.ac_results ul li {
+	background-image:none;
+}/*
+.crm-container .ui-icon,
+.crm-container .icon {
+	background-image: url("../images/jquery-ui-3E3E3E.png")
+}
+.crm-container .icon {
+	height: 16px;
+	width: 16px;
+	float: left;
+}
+.crm-container span.icon,
+.crm-container a.ui-icon {
+	float: none;
+	display: inline-block;
+}
+.crm-container .button .icon,
+.crm-container a.invoiceButton .icon,
+.crm-container .crm-button .icon,
+.crm-accordion-header .icon {
+	position: relative;
+	top: 0;
+	background-image: url("../images/jquery-ui-FFFFFF.png");
+}*/
+.crm-container span.crm-button .icon {
+	margin-top: 3px;
+}
+.crm-container .button .icon {
+	float: left;
+	display: block;
+	margin-right: 3px;
+}
+.crm-container .button .icon.css_right {
+	float: right;
+	margin-right: 0;
+	margin-left: 3px;
+}
+
+/* Font Awesome */
+
+.crm-container .crm-delete-inline .icon.delete-icon {
+	margin: 0;
+	background: no-repeat;
+	border: none;
+	text-align: center;
+}
+.crm-container .crm-icon,
+#crm-container .geotag:before,
+.crm-container .Contribution-icon:before,
+.crm-container div.ui-notify-message div.icon,
+.crm-container .inform-icon:before,
+.crm-container .icon.info-icon,
+#crm-container .messages.status.no-popup:before,
+.crm-container.ui-dialog .messages.status.no-popup:before,
+input.crm-placeholder-icon::placeholder,
+.crm-container .icon.delete-icon {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1;
+	font-family: FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--vv-dark-gray);
+	text-indent: inherit;
+	margin: 2px 0 0 2px;
+	background-image: none;
+}
+a.crm-i:hover {
+	text-decoration: none;
+}
+.crm-container a:hover .crm-i.fa-trash,
+.crm-container .crm-button:hover .crm-i.fa-trash,
+.crm-container .crm-hover-button:hover .crm-i.fa-trash,
+.crm-container span:hover>.crm-i.fa-trash,
+.crm-container button:hover >.crm-i.fa-trash,
+.crm-container button:focus >.crm-i.fa-trash,
+.crm-container button:hover >.crm-i.fa-ban,
+.crm-container button:focus >.crm-i.fa-ban,
+.crm-i.crm-i-red,
+.crm-container .red-icon,
+.crm-container a:hover .icon.delete-icon,
+.crm-container .crm-button:hover .icon.ui-icon-trash,
+.crm-container .crm-hover-button:hover .icon.ui-icon-trash,
+.crm-container span:hover>.icon.delete-icon,
+.crm-container .icon.delete-icon {
+	color:var(--red-alert);
+}
+.crm-i.crm-i-blue,
+.crm-status-icon.info {
+    color:var(--light-blue);
+}
+.crm-i.crm-i-green,
+.crm-i.fa-rocket {
+	color: var(--green-success);
+}
+#crm-container div.crm-summary-display_name {
+	font-size: 1.4rem;
+	margin: 30px 0 20px;
+	line-height: 1.4rem;
+}
+.crm-summary-display_name .crm-icon {
+	font-size: 1.4rem;
+	margin: 0 15px 0 0;
+}
+
+/* Individual FA icons */
+
+.crm-container .icon.delete-icon::before {
+    content: "\f1f8";
+}
+#crm-container div span.privacy-flag {
+	float: right;
+	font-size: 80%;
+}
+.crm-container a.helpicon {
+	opacity: .8;
+}
+.crm-container a.helpicon:hover,
+.crm-container a.helpicon:focus {
+	opacity: 1;
+}
+div.crm-accordion-header a.helpicon {
+	color: inherit;
+}
+div.crm-master-accordion-header a.helpicon {
+	color: var(--blue-info);
+}
+.crm-container a.helpicon:before {
+	content: "\f059";
+}
+.crm-container div.ui-notify-message div.icon:before {
+	content: "\f05a";
+	color: var(--vvv-light-gray);
+	font-size: 25px;
+	margin-right: 5px;
+	position: relative;
+}
+.select2-results .select2-highlighted .Individual-icon:before, 
+.crm-container .Individual-icon:before {
+	content: "\f007";
+	color: var(--blue-info);
+} 
+.select2-results .Individual-icon:before,
+.crm-container .Individual-subtype-icon:before {
+	content: "\f007";
+	color: var(--light-blue);
+}
+.select2-results .select2-highlighted .Household-icon:before,
+.crm-container .Household-icon:before {
+	content: "\f015";
+	color: var(--amber);
+}
+.select2-results .Household-icon:before,
+.crm-container .Household-subtype-icon:before {
+	content: "\f015";
+	color: var(--yellow);
+}
+.select2-results .select2-highlighted .Organization-icon:before, 
+.crm-container .Organization-icon:before {
+	content: "\f1ad";	
+	color: var(--green-success);
+}
+.select2-results .Organization-icon:before,
+.crm-container .Organization-subtype-icon:before {
+	content: "\f1ad";	
+	color: var(--light-green);
+}
+.crm-container .Contribution-icon:before {
+	content: "\f09d";	
+	color: var(--green-success);	
+	margin: -2px;
+	font-size: 16px;
+}
+.crm-container .Membership-icon:before {
+	content: "\f2c1";	
+	color: var(--amber);
+}
+.crm-container .Activity-icon:before {
+	content: "\f0ae";	
+	color: var(--red-alert);
+}
+.crm-container .Case-icon:before {
+	content: "\f07c";	
+	color: var(--blue-info);
+}
+.crm-container .Grant-icon:before {
+	content: "\f0d6";	
+	color: var(--green-success);
+}
+.crm-container .Pledge-icon:before {
+	content: "\f1d8";	
+	color: var(--blue-info);
+}
+.crm-container .Participant-icon:before {
+	content: "\f145";	
+	color: var(--green-success);
+}
+.crm-container .Note-icon:before {
+	content: "\f249";	
+	color: var(--red-alert);
+}
+.crm-container .Relationship-icon:before {
+	content: "\f2b5";	
+	color: var(--amber);
+}
+.crm-container .Group-icon:before {
+	content: "\f0c0";	
+	color: var(--green-success);
+}
+.crm-container .helpIcon {
+	float: right;
+	position: relative;
+	z-index: 1;
+	margin-right: 45px;
+}
+
+/* Credit card logos */
+
+.crm-container .credit_card_type-section .crm-credit_card_type-icons a {
+	display: block;
+	float: left;
+	width: 50px;
+	height: 30px;
+	background: url(../images/creditcard-icons.png) no-repeat 0 0 transparent;
+	text-indent: -20000px;
+	margin-right: 10px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	border: 1px solid white;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-visa {
+	background-position: -50px 0;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-mastercard {
+	background-position: -100px 0;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-amex {
+	background-position: -150px 0;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-discover {
+	background-position: -200px 0;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-jcb {
+	background-position: -250px 0;
+}
+.crm-container .credit_card_type-section .crm-credit_card_type-icons .crm-credit_card_type-icon-unionpay {
+	background-position: -300px 0;
+}
+.crm-container .cvv2-icon {
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	background: url(../images/creditcard-icons.png) no-repeat 0 0 transparent;
+}
+/* Avoid weird border around the images (some themes will add a border around images) */
+
+#crm-container .credit_card_type-section .crm-credit_card_type-icons a,
+#crm-container .credit_card_type-section .crm-credit_card_type-icons a:link,
+#crm-container .credit_card_type-section .crm-credit_card_type-icons a:hover,
+#crm-container .credit_card_type-section .crm-credit_card_type-icons a:focus,
+#crm-container .credit_card_type-section .crm-credit_card_type-icons a:active {
+	color: white;
+}
+
+/* Icon picker */
+
+#crmIconPicker {
+    background-color: var(--vv-light-gray);
+    padding: 1rem !important;
+}
+#crmIconPicker a.ui-button {
+    background: transparent;
+    width: 42px !important;
+    height: 40px !important; /* to override inline size */
+    border: 0 solid transparent;
+    padding: 16px 5px;
+}
+#crmIconPicker a.ui-button .ui-icon {
+    font-size: 1.5rem;
+}
+#crmIconPicker a.ui-button:hover,
+#crmIconPicker a.ui-button:focus {
+    background: var(--v-light-gray);
+}
+.crm-container a.crm-icon-picker-button {
+	min-width: inherit;
+	text-align: inherit;
+	color: var(--vvv-dark-gray);
+    height: inherit;
+}
+.crm-container a.crm-icon-picker-button .ui-button-icon {
+	margin: 5px 0 5px 5px;
+}
+.crm-container a.crm-icon-picker-button .ui-button-text {
+	color: var(--v-dark-gray);
+}
+.crm-container a.crm-icon-picker-button.ui-button-text-only .ui-button-text {
+	padding: .4em .2em;
+}

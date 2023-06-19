@@ -1,0 +1,116 @@
+
+#civicrm-dashboard > .crm-flex-box {
+	column-gap: 1.5rem;
+}
+#crm-container .crm-dashlet {
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+	border-radius: var(--roundness);
+}
+.crm-container .crm-dashlet-header {
+	border-radius: var(--roundness) var(--roundness) 0 0;
+}
+.crm-container .crm-dashlet-header a {
+	color: inherit;
+    text-decoration: none;
+}
+#crm-container .crm-dashlet-header h3 {
+    background: transparent;
+    cursor: move;
+    color: inherit;
+    margin: 0 50px 0 0 !important;
+    padding: 0;
+}
+.crm-container .crm-dashlet-content {
+	background: var(--vvv-light-gray) !important;
+	border-radius: 0 0 var(--roundness) var(--roundness);
+    padding: 0 var(--ms) var(--ms);
+}
+#crm-container .crm-dashlet-content h3 {
+    padding: var(--s) var(--ms);
+    border-radius: var(--roundness);
+    margin-bottom: 0.5rem !important;
+} 
+#crm-container .crm-dashlet-content td,
+#crm-container .crm-dashlet-content tr {
+    border: 0 solid transparent;
+    padding: 0.25rem;
+}
+
+/* Add dashleet */
+
+#crm-container .crm-inactive-dashlet-fieldset {
+    border: 0 none;
+    padding: 0;
+}
+#crm-container .crm-inactive-dashlet-fieldset > legend {
+	height: auto;
+    border: 0 solid transparent;
+    padding: 0;
+    background-color: transparent;
+    top: 0;
+    margin: 0 0 1rem;
+}
+#crm-container .crm-inactive-dashlet-fieldset > legend .crm-hover-button {
+	background-color: var(--vv-light-gray);
+	padding: var(--btn-padding);
+    border-radius: var(--roundness);
+    margin-right: 1rem;
+}
+#crm-container .crm-inactive-dashlet-fieldset > legend .crm-hover-button:hover,
+#crm-container .crm-inactive-dashlet-fieldset > legend .crm-hover-button:focus {
+	background-color: var(--light-gray);
+    color: var(--dark-gray);
+    text-decoration: none;;
+}
+
+/* Dashboard news tab */
+
+#civicrm-news-feed .crm-news-feed-item-link {
+	padding: 0 var(--s) var(--s);
+	text-align: right;
+}
+.crm-container .crm-tab-button a em {
+	color: var(--vv-dark-gray);
+	font-style: normal;
+}
+#civicrm-news-feed .crm-tab-button a em {
+	display: inline-block;
+	padding: 2px 0 0 0;
+    min-width: 20px;
+    height: 18px;
+	font-size: 0.8rem;	
+	font-weight: 600;
+	line-height: 0.9rem;
+	color: white;
+	background-color: var(--blue-info);
+	border-radius: 2rem;
+}
+#civicrm-news-feed .crm-news-feed-unread .crm-news-feed-item-title {
+    border-bottom: 1px solid var(--green-success);
+}
+
+/* FIXES */
+
+fieldset.crm-inactive-dashlet-fieldset > div {
+    background-color: transparent;
+    padding: 0;
+} 
+.crm-container .crm-inactive-dashlet {
+   margin: 0 1rem 2rem 0;
+   border-radius: var(--roundness);
+ }
+ /* overwrites civi/dashboard.css */
+
+
+/*
+
+#crm-container .widget-content table {
+	background: var(--vvv-light-gray);
+}
+#crm-container .widget-content table .crm-i {
+	padding: 0 0 0 var(--m);
+}
+#crm-container .widget-content table td {
+	padding: var(--s);
+}*/
+
