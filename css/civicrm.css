@@ -956,7 +956,6 @@ table.dataTable.no-footer {
 	display: flex;
 	box-sizing: border-box;
 	flex-wrap: wrap;
-	align-items: flex-start;
 }
 .crm-container .crm-flex-box > * {
 	flex: 1;
