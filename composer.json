@@ -1,0 +1,8 @@
+{
+  "name": "australian_greens/finsburypark",
+  "description": "CiviCRM extension for Finsbury Park - a cross-CMS admin theme for CiviCRM",
+  "require": {
+    "composer/installers": "^1.6 || ^2"
+  },
+  "type": "civicrm-ext"
+}
