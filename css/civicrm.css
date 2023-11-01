@@ -4697,7 +4697,7 @@ crm-container .ac_results {
 	border-radius: 0;
 	border: 0 solid transparent;
 	border-left: 1px solid var(--dark-gray);
-	width: 26px;
+	width: 21px;
 	padding: 2px 0 0 4px;
 }
 .crm-container .select2-container-multi .select2-choices .select2-search-choice {
