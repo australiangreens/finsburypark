@@ -1395,6 +1395,7 @@ input.crm-form-entityref {
 	box-sizing: content-box;
 }
 div.crm-container label {
+	display: inline;
 	font-weight: normal;
 }
 .crm-container .crm-section .label,
@@ -2195,6 +2196,7 @@ input.crm-form-checkbox+label {
 .crm-container .font-red,
 .crm-container .status-removed,
 .crm-container .status-overdue,
+.crm-container .status-overdue td,
 .crm-container .status-fatal,
 .crm-container .status-hold,
 .crm-container .status-past,
@@ -3340,6 +3342,11 @@ div.crm-master-accordion-header a.helpicon {
 	background-color: transparent;
 	color: var(--vvv-dark-gray);
 }
+.crm-container .crm-collapsible .collapsible-title {
+	font-weight: 600;
+	height: 28px;
+	padding-top: 6px;
+}
 .crm-container span.expanded::before, 
 #crm-container a.expanded::before, 
 .crm-container .crm-expand-row.expanded::before,
@@ -4247,6 +4254,7 @@ crm-container .ac_results {
 	z-index: 16;
 }
 .crm-container .crm-summary-link .crm-icon {
+	display: inline;
 	margin: -1px 5px 0px 0;
 	width: 25px;
 }
@@ -4680,6 +4688,12 @@ crm-container .ac_results {
 }
 .crm-container select {
 	line-height: 18px;
+	min-height: 32px;
+	padding-left: 8px;
+	border: solid 1px;
+	border-radius: 3px;
+	border-color: rgb(204, 204, 204);
+	background-color: rgb(255, 255, 255);
 }
 .crm-container .select2-container-multi .select2-choices {
 	min-height: 25px;
@@ -4710,6 +4724,9 @@ crm-container .ac_results {
 	border: 1px solid var(--dark-gray);
 	line-height: 13px;
 	border-radius: 3px;
+}
+.crm-container .select2-container-multi .select2-choices .select2-search-choice-close {
+	padding: 0;
 }
 .crm-container .select2-container .select2-choice > .select2-chosen {
 	padding: 0 6px 1px;
