@@ -1466,7 +1466,8 @@ input.crm-form-checkbox+label {
 .crm-container input.dateplugin, 
 .crm-container input.crm-form-password,
 .crm-container .select2-container-multi .select2-choices,
-.crm-container .select2-container .select2-choice {
+.crm-container .select2-container .select2-choice,
+.crm-container select {
 	background-color: white;
 	background-image: none;
 	vertical-align: middle;
@@ -4687,13 +4688,7 @@ crm-container .ac_results {
 	background: url('../images/loading.gif') no-repeat center center;
 }
 .crm-container select {
-	line-height: 18px;
 	min-height: 32px;
-	padding-left: 8px;
-	border: solid 1px;
-	border-radius: 3px;
-	border-color: rgb(204, 204, 204);
-	background-color: rgb(255, 255, 255);
 }
 .crm-container .select2-container-multi .select2-choices {
 	min-height: 25px;
@@ -4727,6 +4722,7 @@ crm-container .ac_results {
 }
 .crm-container .select2-container-multi .select2-choices .select2-search-choice-close {
 	padding: 0;
+	height: 12px;
 }
 .crm-container .select2-container .select2-choice > .select2-chosen {
 	padding: 0 6px 1px;
