@@ -4551,6 +4551,7 @@ crm-container .ac_results {
 }
 .crm-container .blockUI.blockOverlay {
 	background: url("../images/loading-overlay.gif") center center no-repeat white !important;
+  position: sticky;
 }
 #crm-container .ui-widget-content .ui-state-default,
 #crm-container .ui-state-default,
