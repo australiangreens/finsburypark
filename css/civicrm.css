@@ -58,6 +58,14 @@
 	--gold: #c67605;
 	--yellow: #ffffcc;
 	--dark-yellow: #f8e80b;
+	--font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans, Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--sa-font-family: var(--sa-font-family);
+	--roundness: 3px;
+	--label-colour: var(--vvv-dark-gray);
+	--box-background: var(--vvv-light-gray);
+	--danger-colour: var(--red);
+	--warning-colour: var(--gold);
+	--success-colour: var(--green);
 }
 
 /*
@@ -718,7 +726,7 @@ table.dataTable.display tbody tr.even {
 }
 #crm-container table.nestedActivitySelector tr.status-overdue,
 #crm-container table.nestedActivitySelector tr a.status-overdue {
-	color: var(--red);
+	color: var(--danger-colour);
 }
 #crm-container table.nestedActivitySelector tr a.crm-activity-status {
 	cursor: pointer;
@@ -1467,7 +1475,8 @@ input.crm-form-checkbox+label {
 .crm-container input.dateplugin, 
 .crm-container input.crm-form-password,
 .crm-container .select2-container-multi .select2-choices,
-.crm-container .select2-container .select2-choice {
+.crm-container .select2-container .select2-choice,
+.crm-container select {
 	background-color: white;
 	background-image: none;
 	vertical-align: middle;
@@ -2123,9 +2132,9 @@ input.crm-form-checkbox+label {
 }
 .crm-container .crm-error,
 .crm-container .crm-inline-error {
-	background: var(--light-red) none repeat scroll 0 0;
+	background: var(--light-error) none repeat scroll 0 0;
 	border: none;
-	color: var(--red);
+	color: var(--danger);
 }
 .crm-container .crm-error {
 	padding: 4px;
@@ -2203,7 +2212,7 @@ input.crm-form-checkbox+label {
 .crm-container .status-past,
 .crm-contact-deceased,
 .crm-container .status-warning {
-	color: var(--red);
+	color: var(--danger);
 }
 /* Styles for Actions Ribbon */
 
@@ -2433,7 +2442,7 @@ span.crm-status-icon {
 	display: inline-block;
 }
 #crm-status-list .crm-severity-emergency, #crm-status-list .crm-severity-alert, #crm-status-list .crm-severity-critical, #crm-status-list .crm-severity-error {
-	background-color: var(--red);
+	background-color: var(--danger);
 }
 
 /* Loading Element (NB - sizes might need tidying) */
@@ -2797,7 +2806,7 @@ i.fa-pencil {
 .crm-i.fa-envelope,
 .crm-container button:hover >.crm-i.fa-plus,
 .crm-container button:focus >.crm-i.fa-plus {
-	color: var(--green);
+	color: var(--success-colour);
 }
 .crm-container.ui-dialog .ui-dialog-title {
 	background: none;
@@ -2925,13 +2934,15 @@ a.crm-i:hover {
 .crm-container button:focus >.crm-i.fa-trash,
 .crm-container button:hover >.crm-i.fa-ban,
 .crm-container button:focus >.crm-i.fa-ban,
-.crm-i.crm-i-red,
-.crm-container .red-icon,
 .crm-container a:hover .icon.delete-icon,
 .crm-container .crm-button:hover .icon.ui-icon-trash,
 .crm-container .crm-hover-button:hover .icon.ui-icon-trash,
 .crm-container span:hover>.icon.delete-icon,
 .crm-container .icon.delete-icon {
+	color:var(--danger);
+}
+.crm-i.crm-i-red,
+.crm-container .red-icon {
 	color:var(--red);
 }
 .crm-i.crm-i-blue,
@@ -3878,7 +3889,7 @@ div.crm-master-accordion-header a.helpicon {
 	background-color: var(--blue);
 }
 #crm-container div.achieved {
-	background-color: var(--green);
+	background-color: var(--success-colour);
 }
 #crm-container .honor_roll {
 	margin: 1em 20px 0 0;
@@ -3902,7 +3913,7 @@ div.crm-master-accordion-header a.helpicon {
 	margin: 1em 0 1.5em 0;
 }
 #crm-container .thermometer-fill {
-	background-color: var(--green);
+	background-color: var(--success-colour);
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -4641,15 +4652,14 @@ crm-container .ac_results {
 .crm-container input.ng-invalid.ng-dirty,
 .crm-container select.ng-invalid.ng-dirty,
 .crm-container textarea.ng-invalid.ng-dirty,
-.crm-container .crm-ui-datetime.ng-dirty input.incomplete {
-	border: 1px solid var(--red);
+.crm-container .crm-ui-datetime.ng-dirty input.incomplete,
+.crm-container input.crm-form-text.ng-invalid.ng-dirty {
+	border: 1px solid var(--danger);
 }
 .crm-container input.ng-valid, .crm-container input.ng-pristine, .crm-container textarea.ng-valid, .crm-container textarea.ng-pristine, .crm-container select.ng-valid, .crm-container select.ng-pristine {
 	border: 1px solid var(--mid-gray);
 }
-.crm-container input.crm-form-text.ng-invalid.ng-dirty {
-	border: 1px solid var(--red);
-}
+
 /* Select2 */
 
 .crm-container div.select2-container {
@@ -4679,13 +4689,7 @@ crm-container .ac_results {
 	background: url('../images/loading.gif') no-repeat center center;
 }
 .crm-container select {
-	line-height: 18px;
 	min-height: 32px;
-	padding-left: 8px;
-	border: solid 1px;
-	border-radius: 3px;
-	border-color: rgb(204, 204, 204);
-	background-color: rgb(255, 255, 255);
 }
 .crm-container .select2-container-multi .select2-choices {
 	min-height: 25px;
@@ -4719,6 +4723,7 @@ crm-container .ac_results {
 }
 .crm-container .select2-container-multi .select2-choices .select2-search-choice-close {
 	padding: 0;
+	height: 12px;
 }
 .crm-container .select2-container .select2-choice > .select2-chosen {
 	padding: 0 6px 1px;
@@ -5066,7 +5071,6 @@ body.path-civicrm .crm-container th > a::after {
 }
 body.path-civicrm .crm-container .panel {
 	padding: inherit;
-	border: inherit;
 	background: inherit;
 }
 body.path-civicrm.crm-menubar-below-cms-menu > #civicrm-menu-nav ul#civicrm-menu {
@@ -5208,42 +5212,18 @@ html.admin-bar .crm-container div.messages.status::before {
     background-color: var(--light-green);
 }
 
-/* Accessible accordions
+/* ThemeTest */
 
-.crm-container summary /* For older CMS themes not styling summary * {
-  font-size: 1rem;
-  padding: 0.75rem 0;
-  font-weight: bold;
-  cursor: pointer;
+.theme-test-snippets article > .panel {
+	border: 1px solid var(--light-blue);
 }
-.crm-container details > *:not(summary) {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.theme-test-snippets article i.fa-check,
+.theme-test-snippets article i.fa-check::before {
+	color: #fff;
 }
-.crm-container .crm-accordion-light summary,
-.crm-master-accordion-header {
-  font-weight: normal;
-}
-
-.crm-container .crm-accordion-header.active {
-  font-weight: bold;
-  background-color: #3e3e3e;
-}
-
-.crm-container .crm-accordion-header:hover,
-.crm-container .crm-accordion-bold:hover,
-.crm-container .crm-accordion-header:focus,
-.crm-container .crm-accordion-bold:focus {
-  background-color: #2f2f2e;
-}
-
-#crm-container .widget-content .crm-accordion-header:hover {
-  background-color: #e8e8de;
-}
-
-.crm-container .crm-accordion-wrapper .crm-master-accordion-header,
-.crm-container .crm-accordion-light summary {
-  background-color: transparent;
-  font-weight: normal;
-  color: #3e3e3e;
-} */
+.theme-test-snippets article > .panel.canonical  {
+	border-color: var(--green);
+} 
+.theme-test-snippets .canonical #bootstrap-theme .panel-info > .panel-heading {
+	background-color: var(--light-green);
+} 

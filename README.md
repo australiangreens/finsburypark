@@ -46,6 +46,10 @@ In some instances, after upgrading CiviCRM, the theme defaults back to Civi's de
 
 ## Changelog / known issues
 
+Version 0.20 - (beta, only on gitlab) - Supports CiviCRM 5.69+ Accessible Accordions, adjusts colour names with some Standalone variables, tweaks themetest style.
+
+Version 0.19 - Continued fixes, including from Nicolas Ganivet @ CiviDesk. For versions of Civi before 5.69.
+
 Version 0.18 - Many small fixes, including increased SearchKit, FormBuilder, D9 Claro and Joomla4 support.
 
 Version 0.17 - Improved Form Builder and Search Kit support, some D9+ Claro theme resets
