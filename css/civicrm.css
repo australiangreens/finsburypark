@@ -74,8 +74,7 @@
 .crm-container .clear {
 	clear: both;
 }
-#crm-container .label,
-.crm-container .label {
+.crm-container div:not(.theme-test-snippets) .label {
 	background-color: transparent;
 	padding: 0;
 	font-size: inherit;
@@ -321,7 +320,9 @@ i.crm-i {
 .crm-container .ui-dialog-title,
 .crm-container .crm-accordion-header,
 #crm-container .crm-news-feed-item-title,
-.crm-container .header-dark {
+.crm-container .header-dark,
+.crm-container .crm-accordion-bold > summary,
+.crm-container details > .crm-accordion-header {
 	font-size: 1rem;
 	line-height: 1.1rem;
 	color: var(--vv-dark-gray);
@@ -2868,29 +2869,7 @@ i.fa-pencil {
 }
 .ac_results ul li {
 	background-image:none;
-}/*
-.crm-container .ui-icon,
-.crm-container .icon {
-	background-image: url("../images/jquery-ui-3E3E3E.png")
 }
-.crm-container .icon {
-	height: 16px;
-	width: 16px;
-	float: left;
-}
-.crm-container span.icon,
-.crm-container a.ui-icon {
-	float: none;
-	display: inline-block;
-}
-.crm-container .button .icon,
-.crm-container a.invoiceButton .icon,
-.crm-container .crm-button .icon,
-.crm-accordion-header .icon {
-	position: relative;
-	top: 0;
-	background-image: url("../images/jquery-ui-FFFFFF.png");
-}*/
 .crm-container span.crm-button .icon {
 	margin-top: 3px;
 }
@@ -3250,7 +3229,7 @@ div.crm-master-accordion-header a.helpicon {
 
 /*
 	
-	ACCORDION / EXPAND TRIANGLES
+	ACCORDIONS
 	
 */
 
@@ -3258,15 +3237,16 @@ div.crm-master-accordion-header a.helpicon {
 .crm-container .crm-collapsible.collapsed .collapsible-title::before, 
 .crm-container span.collapsed::before,
 .crm-container a.collapsed::before, 
-.crm-container .crm-expand-row::before {
+.crm-container .crm-expand-row::before,
+.crm-container details > summary:before {
 	content: "\f0da";
 }
 .crm-container .crm-accordion-header::before, 
 .crm-container .crm-collapsible .collapsible-title::before, 
 .crm-container span.expanded::before, 
 .crm-container a.expanded::before, 
-.crm-container .crm-expand-row.expanded::before {
-	font-family: "FontAwesome";
+.crm-container .crm-expand-row.expanded::before,
+.crm-container details[open] > summary:before {
 	content: "\f0d7";
 }
 .crm-container .crm-accordion-header,
@@ -3285,7 +3265,19 @@ div.crm-master-accordion-header a.helpicon {
 .crm-container a.crm-expand-row:visited::before {
 	color: var(--vvv-dark-gray);
 }
-.crm-container .crm-accordion-header {
+.crm-container summary { /* default summary setting*/
+	display: list-item;
+	list-style: none;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem;
+	font-weight: bold;
+}
+.crm-container summary::-webkit-details-marker { /* Safari fix to remove summary icon */
+	display: none;
+}
+.crm-container .crm-accordion-header,
+.crm-container .crm-accordion-bold > summary {
 	cursor: pointer;
 	color: var(--vv-light-gray);
 	font-weight: normal;
@@ -3314,7 +3306,8 @@ div.crm-master-accordion-header a.helpicon {
 .crm-container .crm-accordion-wrapper .crm-master-accordion-header:before, 
 .crm-container .crm-collapsible .collapsible-title:before,
 .crm-container .crm-accordion-header:before,
-.crm-container .collapsed .crm-accordion-header:before {
+.crm-container .collapsed .crm-accordion-header:before,
+.crm-container details > summary:before {
 	font: normal normal normal 14px/1 FontAwesome;
 	font-style: normal;
 	font-size: 1rem;
@@ -3375,12 +3368,12 @@ div.crm-master-accordion-header a.helpicon {
 	font-size: 0.8rem;
 }
 #crm-container .widget-wrapper,
-.crm-container .crm-accordion-wrapper {
+.crm-container .crm-accordion-wrapper,
+.crm-container details.crm-accordion-bold {
 	border-radius: 3px;
 	border: 1px solid var(--vv-light-gray);
 	background-color: var(--vvv-light-gray);
 	box-shadow: none !important;
-	margin-bottom: 0.5rem;
 }
 .crm-search_filters-accordion {
 	background-color: white;
@@ -3407,20 +3400,18 @@ div.crm-master-accordion-header a.helpicon {
 #crm-container .widget-content .crm-accordion-body {
 	padding: 10px;
 }
+.crm-container details .crm-accordion-body {
+	display: block; /* Fix for old JS trying to hide crm-accordion-body */
+  }	
 .crm-container .collapsed .crm-accordion-header {
 	border-radius: 3px;
 }
-.crm-container .crm-accordion-body {
+.crm-container .crm-accordion-wrapper .crm-accordion-body,
+.crm-container details.crm-accordion-bold .crm-accordion-body {
 	border-radius: 0 0 4px 4px;
-	border: 0 solid transparent;
-	line-height: 18px;
 	color: var(--vvv-dark-gray);
-	font-size: 14px;
-	border-top: 1px solid var(--light-gray);
-	padding: 10px;
-}
-.crm-container .crm-accordion-body > div {
-	padding: 10px;
+	border: 1px solid var(--light-gray);
+	padding: 0.75rem;
 }
 .crm-container .crm-accordion-body > div:first-of-type {
 	padding: 0 10px;
@@ -3431,9 +3422,10 @@ div.crm-master-accordion-header a.helpicon {
 .crm-container .ui-tabs-panel .crm-accordion-body .description {
 	margin: -5px 0 5px 8px;
 }
-.crm-container .crm-master-accordion-header+.crm-accordion-body {
+.crm-container .crm-master-accordion-header+.crm-accordion-body,
+.crm-accordion-wrapper.crm-accordion-light {
 	border: none;
-	padding: 0;
+	padding: 0 1rem;
 }
 .crm-container .crm-accordion-header.active {
 	font-weight: bold;
@@ -5211,3 +5203,43 @@ html.admin-bar #crm-container :not(.crm-footer) .messages.status,
 html.admin-bar .crm-container div.messages.status::before {
     background-color: var(--light-green);
 }
+
+/* Accessible accordions
+
+.crm-container summary /* For older CMS themes not styling summary * {
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.crm-container details > *:not(summary) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.crm-container .crm-accordion-light summary,
+.crm-master-accordion-header {
+  font-weight: normal;
+}
+
+.crm-container .crm-accordion-header.active {
+  font-weight: bold;
+  background-color: #3e3e3e;
+}
+
+.crm-container .crm-accordion-header:hover,
+.crm-container .crm-accordion-bold:hover,
+.crm-container .crm-accordion-header:focus,
+.crm-container .crm-accordion-bold:focus {
+  background-color: #2f2f2e;
+}
+
+#crm-container .widget-content .crm-accordion-header:hover {
+  background-color: #e8e8de;
+}
+
+.crm-container .crm-accordion-wrapper .crm-master-accordion-header,
+.crm-container .crm-accordion-light summary {
+  background-color: transparent;
+  font-weight: normal;
+  color: #3e3e3e;
+} */
