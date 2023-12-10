@@ -13,11 +13,12 @@
     <url desc="Support">https://visuali.st</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2023-21-03</releaseDate>
-  <version>0.18</version>
+  <releaseDate>2023-07-12</releaseDate>
+  <version>0.19</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.0</ver>
+    <min>5.0</min>
+    <max>5.68</max>
   </compatibility>
   <comments>A cross-CMS CiviCRM admin theme.</comments>
   <classloader>
