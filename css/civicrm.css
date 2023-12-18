@@ -327,7 +327,6 @@ i.crm-i {
 .crm-container fieldset legend,
 .crm-container .ui-dialog-title,
 .crm-container .crm-accordion-header,
-#crm-container .crm-news-feed-item-title,
 .crm-container .header-dark,
 .crm-container .crm-accordion-bold > summary,
 .crm-container details > .crm-accordion-header {
@@ -3255,8 +3254,11 @@ div.crm-master-accordion-header a.helpicon {
 	padding: 0; /* reset */
 }
 .crm-container details details {
-	padding: 0.25rem; /* adds padding for nested accordions */
+	padding: 0 0.25rem; /* adds padding for nested accordions */
 	margin: 0;
+}
+.crm-container .crm-accordion-wrapper {
+	margin-bottom: 0.5rem;
 }
 
 /* Headers */
@@ -3267,6 +3269,7 @@ div.crm-master-accordion-header a.helpicon {
 	font-size: 1rem;
 	padding: 0.5rem;
 	font-weight: bold;
+	color: var(--vvv-dark-gray);
 }
 .crm-container .crm-accordion-inner .crm-accordion-header {
 	font-size: 0.8rem;
@@ -3292,7 +3295,7 @@ div.crm-master-accordion-header a.helpicon {
 	border-radius: 3px;	
 	text-shadow: none;
 }
-.crm-container div.crm-accordion-header,
+.crm-container div.crm-accordion-wrapper:not(.collapsed) .crm-accordion-header,
 .crm-container details[open] > .crm-accordion-header,
 .crm-container .crm-accordion-bold[open] > summary { /* open version of that */
   border-radius: 3px 3px 0 0; 
@@ -3334,7 +3337,7 @@ div.crm-master-accordion-header a.helpicon {
 /* General icon settings for all collapsible things */
 .crm-container div.crm-accordion-header:before,
 .crm-container .collapsed div.crm-accordion-header:before,
-.crm-container .crm-collapsible .collapsible-title:before,
+.crm-container .crm-collapsible.collapsed .collapsible-title:before,
 .crm-container span.collapsed:before,
 .crm-container a.collapsed:before,
 .crm-container .crm-expand-row:before,
@@ -3356,6 +3359,7 @@ div.crm-master-accordion-header a.helpicon {
 .crm-container details[open] > summary:before  {
   font-family: "FontAwesome";
   content: "\f0d7";
+  width: 1em;
 }
 
 /* Body */
@@ -3402,9 +3406,6 @@ div.crm-master-accordion-header a.helpicon {
 	border: 1px solid var(--light-gray);
 	padding: 0.75rem;
 	margin: 0;
-}
-.crm-container .crm-accordion-body > div:first-of-type {
-	padding: 0 10px;
 }
 .crm-container .ui-tabs-panel .crm-accordion-body > div {
 	padding: 0;
