@@ -17,8 +17,8 @@
   <version>0.19</version>
   <develStage>stable</develStage>
   <compatibility>
-    <min>5.0</min>
-    <max>5.68</max>
+    <ver>5.0</ver>
+    <ver>5.69</ver>
   </compatibility>
   <comments>A cross-CMS CiviCRM admin theme.</comments>
   <classloader>
