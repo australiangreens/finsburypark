@@ -17,7 +17,6 @@
   <version>0.20</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.0</ver>
     <ver>5.69</ver>
   </compatibility>
   <comments>A cross-CMS CiviCRM admin theme.</comments>
@@ -26,5 +25,9 @@
   </classloader>
   <civix>
     <namespace>CRM/Finsburypark</namespace>
+    <format>23.02.1</format>
   </civix>
+  <mixins>
+    <mixin>theme-php@1.0.0</mixin>
+  </mixins>
 </extension>
