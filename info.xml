@@ -13,11 +13,11 @@
     <url desc="Support">https://visuali.st</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2023-21-03</releaseDate>
-  <version>0.18</version>
+  <releaseDate>2023-07-12</releaseDate>
+  <version>0.20</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.0</ver>
+    <ver>5.69</ver>
   </compatibility>
   <comments>A cross-CMS CiviCRM admin theme.</comments>
   <classloader>
@@ -25,5 +25,9 @@
   </classloader>
   <civix>
     <namespace>CRM/Finsburypark</namespace>
+    <format>23.02.1</format>
   </civix>
+  <mixins>
+    <mixin>theme-php@1.0.0</mixin>
+  </mixins>
 </extension>

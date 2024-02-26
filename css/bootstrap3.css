@@ -518,8 +518,15 @@
 
 /* Search display */
 
-#bootstrap-theme .af-markup {
-    padding-bottom: 1rem;
+#bootstrap-theme .form-group {
+	margin-bottom: 0; /* reset */
+}
+#bootstrap-theme .af-markup,
+#bootstrap-theme .crm-af-field.ng-scope {
+	padding-bottom: 1rem;
+}
+#bootstrap-theme .af-container.af-layout-cols {
+	gap: 1rem;
 }
 
 /* Mosaico */
